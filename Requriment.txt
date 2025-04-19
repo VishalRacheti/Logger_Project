@@ -1,3 +1,6 @@
 install all packages needed
 
 1.Pandas , Requests , numpy , so on .. 
+
+  Timestamp           log_type       ACTIONS      USER:USER_NAME/ID 
+2024-12-11 24:12:10

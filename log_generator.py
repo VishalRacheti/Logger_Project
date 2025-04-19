@@ -27,3 +27,23 @@ def generate_random_string(length=10):
      return ''.join(random.choice(string.ascii_letters + string.digits , k=length))
     except Exception as e:
        logging.error(f"Error is generated_random_string: {e}")
+       return "ERROR"
+       
+
+
+#Function to generate the random log entry 
+def generate_log():
+   """
+   Generate a random log entry with a timestamp , log level , action and user 
+   """
+   try:
+    log_level = random.choice(LOG_LEVELS)
+    timestamp= time.strftime("%Y-%m-%d %H-%M%S" , time.gmtime())
+    action = random.choice(ACTIONS)
+    user= generate_random_string(8)
+    log_entry= f"{timestamp} - {log_level} - {action} - User: {user}"
+    return log_entry
+   except Exception as e:
+     logging.error(f"Error is generated_log_entry: {e}")
+     return "ERROR"
+
